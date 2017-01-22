@@ -149,8 +149,8 @@ class YouCompleteMe( object ):
       json.dump( options_dict, options_file )
       options_file.flush()
 
-      args = [ paths.PathToPythonInterpreter(),
-               paths.PathToServerScript(),
+      args = [ "bash",
+               "icu",
                '--port={0}'.format( server_port ),
                '--options_file={0}'.format( options_file.name ),
                '--log={0}'.format( self._user_options[ 'log_level' ] ),
